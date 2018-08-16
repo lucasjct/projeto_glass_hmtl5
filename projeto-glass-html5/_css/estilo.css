@@ -1,0 +1,230 @@
+@charset "UTF-8"; /* padrão portugês brasil css. Nesta área definimos os conjuntos de caracteres*/
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@font-face { /* com este comando podemos importar arquivos de fontes. Elas podem ser baixadas em google.com/fonts*/
+    font-family:'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+body{ 
+	background-color:#dddddd;
+		  color: rgba(0,0,0,1);
+    font-family: Arial, sans-serif;
+
+}
+div#interface{
+	width: 900px;/* largura*/
+	background-color: #ffffff;
+	margin: -20px auto 0px auto; /* "Margin" é a area externa ao objeto. sempre que eu quiser trabalhar com a centralização da página, devo trabahar com as margens o primeiro e o terceiro valor são as margens de cima e a debaixo*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px 10px 10px 10px;
+}
+header#cabecalho img#icone {
+	position: absolute; /* configuração da figura "id icone" do html - o "oculos_pequeno*/
+	left: 950px;
+	top: 55px;}
+
+header#cabecalho {
+border-bottom: 1px #606060 solid;
+height: 150px;
+background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+header#cabecalho h1{
+font-family: "FonteLogo",sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding:0 px;
+    margin-bottom: 0px; /*ajusta a margem inferior "bottom'*/
+}
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;/*fonte importada da web*/
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;/* Ajusta a margem superior 'top'*/
+}
+header#cabecalho-do-artigo h1{
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px
+
+}
+header#cabecalho-do-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+
+
+}
+header#cabecalho-do-artigo h3{
+    font-size: 12px;
+    color: #606060;
+
+}
+.direita{
+    text-align: right;
+}
+p {
+	text-align:justify; /*configuração da estrutura do texto*/
+    text-indent: 50px;
+    padding-left: 15px;
+}
+a{ /*formatação dos links*/
+    color: #606060;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline; /* formatação para que quando passar o mouse sobre a palavra (link), ela aparece sublinhada*/
+}
+/* Imagens com legendas*/
+figure.foto-legenda /* classe criada no outro documento html*/{
+position: relative;
+border: 8px solid white;  /* criação de uma borda para a imagem*/
+box-shadow: 1px 1px 4px black; /*cada 'px' corresponde a 'sombras' respectivamente: horizontaç, vertival e espalhamento.*/
+}
+figure.foto-legenda img {
+width: 100%;
+height: 100%; /* Ajusta a figura na página*/
+}
+figure.foto-legenda figcaption {
+opacity:0;
+position: absolute;
+top:0px;
+background-color: rgba(0,0,0,.4); /*transparência da cor */
+color: white; /* cor dafonte*/
+width:100%;
+height:100%;
+padding: 10px;
+box-sizing: border-box;
+transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption {/* o "hover dispara uma função específica qnd o mouse passa sober a imagem*/
+opacity: 1;
+}
+nav#menu {
+
+display: block;
+}
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: relative;
+	top: -115px;
+	left: 250px;
+}
+nav#menu li {
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 10px;
+	margin: 2px; /* distancia entre os links do menu*/
+    transition: background-color 1s;
+    margin-top: 5px
+}
+
+nav#menu li:hover{
+
+	background-color: #606060;
+}
+nav#menu h1{
+	display: none; /*retita o link o sublinhado automático do link*/
+}
+nav#menu a {     /* "a" referese a todos os links "ancora" no html*/
+	color:#000000;
+	text-decoration: none;
+}
+nav#menu a:hover { /*NOTAR QUE NÃO USA ESPAÇO NO ":hover" evitar o máximo possível de espaços no cod*/
+	color: #ffffff;
+	text-decoration: underline; /*decora o link com sublinhado ao passarmos a seta do mouse sobre*/
+}
+section#corpo { /* section divide as áres do texto, como aside e footer.*/
+    display: block; /*display block = exibição para ser mostrada como um bloco*/
+    width: 500px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+iframe#video01{
+    margin-left:30px;
+    width:450px ;
+}
+video#video02{
+    width: 360px;  
+}
+article#noticia-principal h2{
+font-size:  12pt;
+color: #606060;
+background-color: #dddddd;
+padding: 5px 0px 10px 0px;
+margin: 10px 0px 10px 0px;
+
+}
+aside#lateral{
+	display: block; 
+    width: 400; /*largura*/
+    padding-left: 15px;
+    background-color: #dddddd;
+    margin-left: 520px;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow:  2px 2px 2px rgba(0,0,0,.5); /*fazer sobreamento*/
+    
+}
+aside#lateral h1 {
+    font-family: "FonteLogo";
+    color: #606060;
+    margin-top: 0px
+
+}
+
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+
+}
+
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060 ;
+}
+footer#rodape p{
+text-align: center;}
+
+table#tabelaspec{
+	border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding: 10px;
+}
+
+table#tabelaspec td.ce{
+    color: white;
+    background-color:#606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+}
+
+table#tabelaspec caption{
+    color: #808080;
+    font-size: 15px;
+    font-weight: bolder;
+}
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
